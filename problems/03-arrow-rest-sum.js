@@ -11,6 +11,13 @@ arrowRestSum(0); // => 0
 ***********************************************************************/
 
 // Your code here
+const arrowRestSum = (...arr) =>{
+  let temp = [...arr];
+  let newTemp = temp.reduce((acc,val)=>{
+    return acc+=val;
+  },0)
+  return newTemp;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

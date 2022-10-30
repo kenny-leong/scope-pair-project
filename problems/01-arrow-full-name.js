@@ -7,14 +7,19 @@ keyword will allow any value assigned to that variable protection from being
 reassigned within that scope.
 
 Examples:
-let p1 = {firstName: 'John', lastName: 'Doe'};
-arrowGetFullName(p1); // => 'John Doe'
-let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
-arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
 // Your code here
+const arrowGetFullName = obj =>{
+  return obj.firstName +" "+ obj.lastName;
+}
+
+let p1 = {firstName: 'John', lastName: 'Doe'};
+console.log(arrowGetFullName(p1))  // => 'John Doe'
+let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
+arrowGetFullName(p2); // => 'Charlie Brown'
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
