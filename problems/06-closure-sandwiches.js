@@ -17,6 +17,7 @@ const sandwichMaker = () =>{
     return str;
   }
 }
+
 let sandwich = sandwichMaker(); // => returns a function
 console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
 console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"

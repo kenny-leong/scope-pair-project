@@ -44,6 +44,22 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 // Your code here
+const curriedSum = num =>{
+  if(num <=0){
+    return null;
+  }
+  let count = num;
+  let temp = 0;
+  return function varAdded(coin){
+    temp+=coin;
+    count -=1;
+    if(count === 0){
+      return temp;
+    }else{
+      return varAdded;
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
