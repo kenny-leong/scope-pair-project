@@ -23,11 +23,15 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 // Your code here
-const lazyAdder = firstNum =>{
-  return function(secondNum){
-    return secondNum+firstNum;
-  }
-}
+let lazyAdder = num1 => num2 => num3 => num1+num2+num3;
+
+// let lazyAdder = (firstNum) => {
+//   return function(num2){
+//     return function(num3){
+//       return firstNum+num2+num3;
+//     }
+//   }
+// }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

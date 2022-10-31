@@ -14,7 +14,23 @@ function returned by recVolume should continue to return the original volume.
 ***********************************************************************/
 
 // Your code here
+let recVolume = h => {
+  let count=[h];
+  return function collector(w){
+    if(count.length<3){
+      count.push(w);
+    }
+    if(count.length===3){
+      return count[0]*count[1]*count[2];
+    }else{
+      return collector;
+    }
+  }
+}
 
+let temp1 = recVolume(10);
+let temp2 = temp1(5);
+console.log(temp2);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
