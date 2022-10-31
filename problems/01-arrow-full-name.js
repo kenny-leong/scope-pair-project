@@ -8,17 +8,15 @@ reassigned within that scope.
 
 Examples:
 
-***********************************************************************/
-
-// Your code here
-const arrowGetFullName = obj =>{
-  return obj.firstName +" "+ obj.lastName;
-}
-
 let p1 = {firstName: 'John', lastName: 'Doe'};
 console.log(arrowGetFullName(p1))  // => 'John Doe'
 let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
 arrowGetFullName(p2); // => 'Charlie Brown'
+***********************************************************************/
+
+// Your code here
+const arrowGetFullName = obj => obj.firstName +" "+ obj.lastName;
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
