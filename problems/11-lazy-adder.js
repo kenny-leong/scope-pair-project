@@ -23,6 +23,11 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 // Your code here
+const lazyAdder = firstNum =>{
+  return function(secondNum){
+    return secondNum+firstNum;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

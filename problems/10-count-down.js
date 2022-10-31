@@ -16,20 +16,30 @@ Example 2:
   console.log(oneDay()); // prints "Happy New Year!"
 
 Example 3:
-  let twoDays = countDownTimer(2); // returns a function
-  console.log(twoDays()); // returns a function
-  console.log(twoDays()); // prints "Happy New Year!"
 
 Example 4:
-  let threeDays = countDownTimer(3); // returns a function
+let threeDays = countDownTimer(3); // returns a function
   console.log(threeDays()); // returns a function
   console.log(threeDays()); // returns a function
   console.log(threeDays()); // prints "Happy New Year!"
 
-***********************************************************************/
+  ***********************************************************************/
 
 // Your code here
-
+const countDownTimer = n =>{
+  let counter = n;
+  if(n>0){
+    return function(){
+      counter--;
+      return countDownTimer(counter);
+  }
+  }else{
+    return 'Happy New Year!'
+  }
+}
+let twoDays = countDownTimer(2); // returns a function
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
