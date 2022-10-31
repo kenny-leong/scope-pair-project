@@ -8,7 +8,20 @@ function.
 
 See below for examples:
 
+***********************************************************************/
+
+// Your code here
+const smoothieMachine = (...params) => {
+  let str = "I'm a smoothie with "+[...params].join(" and ");
+  // let arr = [...params];
+  return function(...params2){
+    // console.log(arr)
+    return str+(params2).join(" and ");
+  }
+}
+
 let smoothie1 = smoothieMachine();
+
 
 console.log(smoothie1("milk"));
 // prints "I'm having a smoothie with milk"
@@ -17,12 +30,13 @@ console.log(smoothie1("kale", "spinach"));
 console.log(smoothie1("honey", "pears", "berries"));
 // prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
 
+
 let smoothie2 = smoothieMachine("apples", "bananas", "berries");
 console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
-***********************************************************************/
 
-// Your code here
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
