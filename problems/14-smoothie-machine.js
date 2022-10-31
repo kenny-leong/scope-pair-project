@@ -7,28 +7,30 @@ string including all of the parameters of smoothieMachine and the return
 function.
 
 See below for examples:
-
+str.split(" ")[str.split(" ").length-1] === "with"
 ***********************************************************************/
 
 // Your code here
 const smoothieMachine = (...params) => {
-  let str = "I'm a smoothie with "+[...params].join(" and ");
-  // let arr = [...params];
+  let str = "I'm having a smoothie with "+[...params].join(" and ");
   return function(...params2){
-    // console.log(arr)
-    return str+(params2).join(" and ");
+    if(str.endsWith("with ")){
+      str = str+[...params2].join(" and ");
+      return str;
+    }else{
+      str = str+" and "+[...params2].join(" and ");
+      return str;
+    }
   }
 }
 
 let smoothie1 = smoothieMachine();
-
-
 console.log(smoothie1("milk"));
 // prints "I'm having a smoothie with milk"
 console.log(smoothie1("kale", "spinach"));
-// prints "I'm having a smoothie with milk and kale and spinach"
-console.log(smoothie1("honey", "pears", "berries"));
-// prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
+// // prints "I'm having a smoothie with milk and kale and spinach"
+// console.log(smoothie1("honey", "pears", "berries"));
+// // prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
 
 
 let smoothie2 = smoothieMachine("apples", "bananas", "berries");
